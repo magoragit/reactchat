@@ -8,10 +8,6 @@ __Install the dependencies:__
 
 `npm install`
 
-__Test:__
-
-`npm test`
-
 __Development mode with livereload:__
 
 `npm run watch`
