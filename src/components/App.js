@@ -4,6 +4,7 @@ import events from '../Events.js';
 
 // import Component's here
 import Header from './Header.js';
+import Chat from './Chat/Chat.js';
 
 export default React.createClass({
 
@@ -12,6 +13,8 @@ export default React.createClass({
     return (
       <div>
         <Header />
+
+        <Chat />
       </div>
     )
   }

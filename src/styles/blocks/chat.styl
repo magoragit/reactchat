@@ -1,0 +1,101 @@
+.chat
+  height: 700px
+  font-family: 'Open Sans', sans-serif
+  border: 1px solid #F5F5F5
+  border-radius: 5px
+  margin: 20px 0
+  -webkit-box-shadow: 0px 4px 9px -1px rgba(0,0,0,0.31);
+  -moz-box-shadow: 0px 4px 9px -1px rgba(0,0,0,0.31);
+  box-shadow: 0px 4px 9px -1px rgba(0,0,0,0.31);
+
+  &-contact
+    margin-top: 10px;
+    width: 100%
+    cursor: pointer
+    padding: 10px
+    transition: 0.4s ease
+
+
+    &:hover {
+      background: #fff
+    }
+
+    &__image
+      width: 80px
+      height: 80px
+      border: 0px
+
+    &__name
+      font-weight: 600
+      font-size: 1.25em
+
+  &-contacts
+    background: #F5F5F5
+    height: 100%
+
+    &__list
+      list-style: none
+      padding-left: 0
+
+     &__title
+        margin-bottom: 15px
+
+  &-area
+    background: #fff
+    height: 100%
+    position: relative
+    padding: 0
+
+    &__advice
+      position: absolute
+      top: 50%
+      left: 50%
+      color: rgb(146,146,146)
+      transform: translate(-50%, -50%)
+
+    &__list
+        padding: 10px 20px
+        list-style: none
+        height: 80%
+        width: 100%
+        overflow-y: scroll
+
+    &__write
+      height: 20%
+      width: 100%
+      position: absolute;
+      bottom: 0
+      left:0
+      border: none
+      border-top: 1px solid #eee
+
+      textarea
+        width: 100%
+        height: 100%
+        padding: 5px 10px
+        resize: none
+        border: 0
+
+        &:focus
+          outline: none
+
+    &__submit
+      position: absolute
+      right: 10px
+      bottom: 10px
+
+  &-message
+    height: auto
+    padding: 10px 15px
+    background: #FAFAFA
+    border-radius: 5px
+    margin-bottom: 10px
+    max-width: 80%
+    float: right
+
+    &__wrapper
+      width: 100%
+
+    &_receive
+      float: left
+      background: #E3F2FD

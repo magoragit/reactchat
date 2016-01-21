@@ -27,7 +27,7 @@ import stylus from 'gulp-stylus';
 const paths = {
   bundle: 'app.js',
   srcJsx: 'src/Index.js',
-  srcCss: 'src/**/*.styl',
+  srcCss: 'src/**/main.styl',
   srcImg: 'src/images/**',
   srcLint: ['src/**/*.js', 'test/**/*.js'],
   dist: 'dist',
@@ -44,7 +44,7 @@ const customOpts = {
 const opts = Object.assign({}, watchify.args, customOpts);
 
 gulp.task('clean', cb => {
-  rimraf('dist', cb);
+  rimraf('dis', cb);
 });
 
 gulp.task('browserSync', () => {

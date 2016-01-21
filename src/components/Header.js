@@ -7,11 +7,6 @@ import events from '../Events.js';
 
 export default React.createClass({
 
-  handleButtonClick: function() {
-    // call action "action-example"
-    events.emit('example');
-  },
-
   render: function() {
 
     return (
@@ -21,7 +16,7 @@ export default React.createClass({
             <img src="http://magora-systems.com/media/logo.png" alt="Magora Systems" />
           </div>
 
-          <button onClick={this.handleButtonClick} className="col-xs-2">Try to work with action</button>
+
         </div>
       </header>
     )
