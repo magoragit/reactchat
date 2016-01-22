@@ -12,12 +12,13 @@ export default React.createClass({
   render: function() {
 
     return (
-      <li className="chat-contact" onClick={this.handleSelectDialog}>
+      //<li className={'chat-contact {this.props.activeId === this.props.id ? 'chat-contact_active' : ''}'} onClick={this.handleSelectDialog}>
+      <li className='chat-contact' onClick={this.handleSelectDialog}>
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-xs-3 chat-contact__avatar">
             <img src={this.props.image} className="chat-contact__image"/>
           </div>
-          <div className="col-md-8">
+          <div className="col-xs-9">
             <div className="chat-contact__name">
               {this.props.name}
             </div>

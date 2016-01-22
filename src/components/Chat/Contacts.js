@@ -9,12 +9,19 @@ export default React.createClass({
 
 
   getInitialState: function() {
-    return {contacts: []}
+    return {contacts: [], activeId: ''}
   },
+
+  handleSelectDialog: function(id) {
+    this.props.selectDialog(id);
+    this.setState({activeId: id});
+  },
+
 
   componentWillMount: function() {
     let self = this;
     let props = this.props;
+
     props.contacts.map(function(item){
 
       let ref = new Firebase("https://asdasdasdasdasdasdasd.firebaseio.com/users");
@@ -24,7 +31,9 @@ export default React.createClass({
 
         if (user.exists()) {
           let item = user.val();
-          let contact = (<Contact id={item.login} image={item.image} name={item.name} desc={item.desc} selectDialog = {props.selectDialog}/>);
+          let contact = (<Contact activeId={self.state.activeId} id={item.login} image={item.image} name={item.name} desc={item.desc} selectDialog = {self.handleSelectDialog}/>);
+
+          // prepare
           let contacts = self.state.contacts;
           contacts[contacts.length] = contact;
           self.setState({contacts: contacts});

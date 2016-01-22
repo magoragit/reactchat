@@ -4,30 +4,29 @@ import events from '../../Events.js';
 
 // import Component's here
 export default React.createClass({
-  render: function() {
 
+  handleSetting: function() {
+    this.props.editMode();
+  },
+
+  render: function() {
     return (
       <div>
-          <div className="chat-contact chat-contact_profile">
+          <div className="chat-contact chat-contact_profile" onClick = {this.handleSetting}>
             <div className="row">
-                    <div className="col-md-4">
+                    <div className="col-xs-3 chat-contact__avatar">
                        <img src={this.props.user.image} className="chat-contact__image"/>
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-xs-9">
                         <div className="chat-contact__name">
                         {this.props.user.name}
                     </div>
                 <p className="chat-contact__desc">
-                    {this.props.user.desc}
+                    <em>{this.props.user.desc}</em>
                 </p>
 
                 <p className="chat-contact__desc">
-                  <span>
-                      <strong>friends:</strong> 62
-                  </span>
-                  <span>
-                    <strong>message:</strong> 14
-                  </span>
+                  <a onClick = {this.handleSetting}>edit profile</a>
                 </p>
             </div>
           </div>

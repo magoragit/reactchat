@@ -13,7 +13,9 @@ export default React.createClass({
       <header className="header">
         <div className="row">
           <div className="header__logotype col-xs-10">
-            <img src="http://magora-systems.com/media/logo.png" alt="Magora Systems" />
+            <a href="http://magora-systems.com/">
+                <img src="http://magora-systems.com/media/logo.png" alt="Magora Systems" />
+            </a>
           </div>
 
 

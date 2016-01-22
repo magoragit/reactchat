@@ -36,7 +36,7 @@ export default React.createClass({
           <label for="exampleInputPassword">Password</label>
           <input type="password" className="form-control" id="exampleInputPassword"  value = {this.state.password} onChange={this.handleChangePassword} placeholder="Password" />
         </div>
-        <button type="submit" className="btn btn-default auth__submit" onClick={this.handleAuth}>Auth</button>
+        <button type="submit" className="btn btn-default auth__submit" onClick={this.handleAuth}>Log in</button>
       </form>
     )
   }
