@@ -14,14 +14,17 @@ export default React.createClass({
 
   handleAddMessage: function(e) {
     e.preventDefault();
-    this.props.handleAddMessage(this.state.message);
-    this.setState({message: ''});
+
+    if(this.state.message != "") {
+      this.props.handleAddMessage(this.state.message);
+      this.setState({message: ''});
+    }
   },
 
   render: function() {
     return (
       <form className="chat-area__write">
-        <textarea placeholder="Write your message" onChange = {this.handleChangeMessage} ></textarea>
+        <textarea placeholder="Write your message" value = {this.state.message} onChange = {this.handleChangeMessage} ></textarea>
         <input type="submit" className="chat-area__submit" onClick = {this.handleAddMessage} />
       </form>
     )

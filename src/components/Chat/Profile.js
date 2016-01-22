@@ -8,10 +8,7 @@ export default React.createClass({
 
     return (
       <div>
-          <h3 className="chat-contacts__title">
-             Your profile
-          </h3>
-          <div className="chat-contact">
+          <div className="chat-contact chat-contact_profile">
             <div className="row">
                     <div className="col-md-4">
                        <img src={this.props.user.image} className="chat-contact__image"/>
@@ -22,6 +19,15 @@ export default React.createClass({
                     </div>
                 <p className="chat-contact__desc">
                     {this.props.user.desc}
+                </p>
+
+                <p className="chat-contact__desc">
+                  <span>
+                      <strong>friends:</strong> 62
+                  </span>
+                  <span>
+                    <strong>message:</strong> 14
+                  </span>
                 </p>
             </div>
           </div>
