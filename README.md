@@ -3,7 +3,12 @@ simple chat for communicate with friends
 
 ## Distribution
 
-Demo version - https://github.com/magoragit/magoragit.github.io
+Demo version - https://magoragit.github.io
+
+test user
+---
+**login** - chatbot
+**password**  - 123
 
 
 ## Production
